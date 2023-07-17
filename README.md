@@ -25,3 +25,9 @@ file to keep track of all packages you install
 - pip freeze > requirements.txt
 install al packages for the project like (npm install)
 - pip install -r requirements.txt
+
+migration
+- python manage.py migrate
+new migration
+- python manage.py makemigrations "name"
+- python manage.py migrate
