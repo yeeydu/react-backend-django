@@ -9,6 +9,12 @@ def customers(request):
     serializer = CustomerSerializer(data, many=True)
     return JsonResponse({'customers': serializer.data})
 
+def customer(resquest, id):
+    data = Customer.objects.get(pk=id) #get only specified - id
+    serializer = CustomerSerializer(data)
+    return JsonResponse({'customer': serializer.data})
+
+
 
 """
 Serializers allow complex data such as querysets and model instances to be converted to native Python datatypes 
