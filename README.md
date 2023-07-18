@@ -31,3 +31,9 @@ migration
 new migration
 - python manage.py makemigrations "name"
 - python manage.py migrate
+
+Admin
+- python manage.py createsuperuser
+
+CORS
+- pip install django-cors-headers
