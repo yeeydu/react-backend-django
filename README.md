@@ -34,7 +34,7 @@ new migration
 
 Admin
 - python manage.py createsuperuser
-(python django brings all CRUD funcionality, no need to do enathing)
+(python django brings all CRUD UI,funcionality need to be done)
 
 CORS
 - pip install django-cors-headers
