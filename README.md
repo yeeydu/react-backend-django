@@ -23,7 +23,7 @@ to see all installed packages
 
 file to keep track of all packages you install
 - pip freeze > requirements.txt
-install al packages for the project like (npm install)
+install all packages for the project like (npm install)
 - pip install -r requirements.txt
 
 migration
@@ -38,3 +38,6 @@ Admin
 
 CORS
 - pip install django-cors-headers
+
+Simple JWT
+- pip install djangorestframework-simplejwt
