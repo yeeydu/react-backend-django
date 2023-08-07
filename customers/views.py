@@ -7,6 +7,7 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated #authentication
 from rest_framework_simplejwt.tokens import RefreshToken
 
+#get all customers
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated]) # authentication decorator
 def customers(request):
@@ -22,6 +23,7 @@ def customers(request):
             return Response({'customer': serializer.data}, status=status.HTTP_201_CREATED) # key customer
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+#get a single customer information
 @api_view(['GET', 'POST', 'DELETE']) # DECORATORS
 @permission_classes([IsAuthenticated])
 def customer(request, id):
@@ -42,6 +44,7 @@ def customer(request, id):
             return Response({'customer': serializer.data})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+#register new user
 @api_view(['POST'])
 def register(request):
     serializer = UserSerializer(data=request.data)
